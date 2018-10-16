@@ -1,7 +1,7 @@
 {
-  "consumerKey": "YOUR_TWITTER_API_CONSUMER_KEY",
-  "consumerSecret": "YOUR_TWITTER_API_CONSUMER_SECRET",
-  "accessToken": "",
-  "accessTokenSecret": "",
+  "consumerKey": "jv2kbwO0y0mC8zblrRWDB25Qw",
+  "consumerSecret": "yp6nILMaiyUO1x0pPU4rOSk0rvih2fBOAoNkxHkgKOlq1QuvfQ",
+  "accessToken": "2228937145-ozM0CnS0FnmJEguWxu1tHqdjMK9OacSOotLWzlO",
+  "accessTokenSecret": "tjXx6mp4vO8mGpQAfTdnFPpCdxkxTZKpfzV9JV7PLjOEV",
   "port": "7890"
 }

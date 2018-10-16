@@ -1,0 +1,108 @@
+* {
+  font-family: sans-serif;
+}
+
+body, html, main {
+  margin: 0;
+}
+
+nav {
+  margin: 0;
+  height: 50px;
+  width: 100%;
+  background: #3498db;
+  box-shadow: 0 1px 2px rgba(0,0,0,.3);
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.brand a {
+  margin: 0;
+  color: white;
+  font-weight: 300;
+  align-self: center;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.tweet-columns {
+  width: 75%;
+  background: #ecf0f1;
+  border-radius: 8px;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.key {
+  width: 20%;
+  height: 20rem;
+  background: white;
+  border: solid 1rem #ecf0f1;
+}
+
+.key p {
+  padding-left: 1rem;
+}
+
+.key-container {
+  position: relative;
+  width: 80%;
+  height: 80%;
+}
+
+.tweet-column {
+  position: relative;
+  background: white;
+  width: 28%;
+  height: 80%;
+  box-shadow: 0px 1px 1px rgba(0,0,0,.3);
+  overflow-y: scroll;
+}
+
+.tweet-column.grabbed {
+  transform: rotate(5deg) scale(1.02);
+  box-shadow: 1px 1px 3px rgba(0,0,0,.4);
+}
+
+.top-bar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  height: 30px;
+  background: #2980b9;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-bar h2 {
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+
+
+
+
+/*********TWEETS********/
+
+.tweets {
+  padding: 0;
+}
+
+.tweet {
+  border-bottom: solid 1px black;
+}

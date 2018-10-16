@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Make School Frontend Coding Challenge</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+        <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    </head>
+    <body>
+        <!-- <pre>http://localhost:7890/1.1/statuses/user_timeline.json?count=30&screen_name=makeschool</pre> -->
+
+        <nav>
+          <div class="brand"><a href="/">TechyTweets</a></div>
+        </nav>
+
+        <main>
+          <section class="tweet-columns ui-sortable" id="ui-sortable">
+
+            <div class="tweet-column ui-sortable-handle" id="makeschool">
+                <div class="top-bar">
+                  <h2>MakeSchool</h2>
+                </div>
+            </div>
+
+            <div class="tweet-column ui-sortable-handle" id="ynews">
+                <div class="top-bar">
+                  <h2>YC-News</h2>
+                </div>
+            </div>
+
+            <div class="tweet-column ui-sortable-handle" id="ycomb">
+              <div class="top-bar">
+                <h2>Y-Combinator</h2>
+              </div>
+            </div>
+
+          </section>
+
+          <section class="key">
+              <div class="top-bar">
+                <h2>Key</h2>
+              </div>
+              <p>Click and drag the containers to switch their positions.</p>
+          </section>
+        </main>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <!--jquery ui mobile-->
+        <script src="https://www.codingforkids.us/touch.js"></script>
+        
+        <script src="scripts/scripts.js"></script>
+    </body>
+</html>
