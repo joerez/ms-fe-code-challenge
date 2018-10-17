@@ -25,6 +25,13 @@ nav {
   text-decoration: none;
 }
 
+.about {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 main {
   display: flex;
   flex-direction: row;
@@ -33,6 +40,7 @@ main {
 }
 
 .tweet-columns {
+  position: relative;
   width: 75%;
   background: #ecf0f1;
   border-radius: 8px;
@@ -42,6 +50,49 @@ main {
   justify-content: space-around;
   align-items: center;
 }
+
+.tweet-columns.horizontal {
+  height: 50rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.layout-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: white;
+  border: solid 1px black;
+  padding: .3rem .8rem;
+  border-radius: 12px;
+  transition: all 250ms;
+}
+
+.layout-btn:hover {
+  color: #2980b9;
+  border-color: #2980b9;
+}
+
+.layout-btn-2 {
+  z-index: 10;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: white;
+  border: solid 1px black;
+  padding: .3rem .8rem;
+  border-radius: 12px;
+  transition: all 250ms;
+}
+
+.layout-btn-2:hover {
+  color: #2980b9;
+  border-color: #2980b9;
+}
+
 
 .key {
   width: 20%;
@@ -62,11 +113,17 @@ main {
 
 .tweet-column {
   position: relative;
-  background: white;
+  background: rgba(236, 240, 241,.3);
   width: 28%;
   height: 80%;
   box-shadow: 0px 1px 1px rgba(0,0,0,.3);
   overflow-y: scroll;
+}
+
+.tweet-column.horizontal {
+  width: 80%;
+  height: 18rem;
+  margin-top: 2rem;
 }
 
 .tweet-column.grabbed {
@@ -101,8 +158,40 @@ main {
 
 .tweets {
   padding: 0;
+  margin: 0;
 }
 
 .tweet {
-  border-bottom: solid 1px black;
+  padding: .5rem;
+  margin-bottom: .5rem;
+  background: white;
+}
+
+.tweet-username {
+  display: inline-block;
+}
+
+.tweet-username a {
+  display: inline-block;
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+  transition: all 100ms;
+}
+
+.tweet-username a:hover {
+  color: rgba(52, 152, 219,1.0);
+  text-decoration: underline;
+}
+
+.tweet-date {
+  display: inline-block;
+  font-size: .7rem;
+  color: #7f8c8d;
+  font-weight: 200;
+}
+
+.tweet-text {
+  white-space: pre-line;
+  padding-bottom: 1rem;
 }
