@@ -3,26 +3,37 @@ $( function() {
 
 
 /*********
+
 Save Layout to local storage
+
 *********/
 
 
-  //If there's nothing in localStorage, then set horizontal mode to false.
+  //If there's nothing in localStorage, then set horizontal mode to false, and tweet count to 30.
   if (!localStorage.getItem('horizontalLayout')) {
     window.localStorage.setItem('horizontalLayout', 'false')
   }
+
+  if (!localStorage.getItem('tweetCount')) {
+    window.localStorage.setItem('tweetCount', '30')
+  }
+
+  if(localStorage.getItem('tweetCount')) {
+    $('.tweet-count-input').val(localStorage.getItem('tweetCount'));
+  }
+
 
   //On layout button click, set horizontal mode to true, and update the layout.
   $('#layout-btn').click(function (){
 
     if (window.localStorage.getItem('horizontalLayout') == 'true') {
-      localStorage.clear()
+      localStorage.removeItem('horizontalLayout')
       window.localStorage.setItem('horizontalLayout', 'false')
       return loadLayout()
     }
 
     if (window.localStorage.getItem('horizontalLayout') == 'false') {
-      localStorage.clear()
+      localStorage.removeItem('horizontalLayout')
       window.localStorage.setItem('horizontalLayout', 'true')
       return loadLayout()
     }
@@ -49,7 +60,9 @@ Save Layout to local storage
   loadLayout();
 
   /********
+
     click and drag
+
   *********/
 
   //Makes this ID a sortable container.
@@ -67,9 +80,12 @@ Save Layout to local storage
 
 
   /********
+
     MAKESCHOOL Populate Tweets
+
   *********/
-  let makeschoolTweetUrl = 'http://localhost:7890/1.1/statuses/user_timeline.json?count=30&screen_name=makeschool'
+
+  let makeschoolTweetUrl = `http://localhost:7890/1.1/statuses/user_timeline.json?count=${parseInt(window.localStorage.getItem('tweetCount'), 10)}&screen_name=makeschool`
 
   $.getJSON( makeschoolTweetUrl, function( data ) {
     var items = [];
@@ -117,9 +133,12 @@ Save Layout to local storage
 
 
   /********
+
     YCNEWS Populate Tweets
+
   *********/
-  let ycNewsTweetUrl = 'http://localhost:7890/1.1/statuses/user_timeline.json?count=30&screen_name=newsycombinator'
+
+  let ycNewsTweetUrl = `http://localhost:7890/1.1/statuses/user_timeline.json?count=${parseInt(window.localStorage.getItem('tweetCount'), 10)}&screen_name=newsycombinator`
 
   $.getJSON( ycNewsTweetUrl, function( data ) {
     var items = [];
@@ -165,9 +184,11 @@ Save Layout to local storage
 
 
   /********
+
     YCOMBINATOR Populate Tweets
+
   *********/
-  let ycTweetUrl = 'http://localhost:7890/1.1/statuses/user_timeline.json?count=30&screen_name=ycombinator'
+  let ycTweetUrl = `http://localhost:7890/1.1/statuses/user_timeline.json?count=${parseInt(window.localStorage.getItem('tweetCount'), 10)}&screen_name=ycombinator`
 
   $.getJSON( ycTweetUrl, function( data ) {
     var items = [];
@@ -208,6 +229,32 @@ Save Layout to local storage
       html: items.join( "" )
     }).appendTo( "#ycomb" );
   });
+
+
+
+/*******
+
+ Settings controller
+
+********/
+
+$('#settings-btn').click(function() {
+  $('.settings').toggleClass('show');
+})
+
+$('.close-btn').click(function() {
+  $('.settings').toggleClass('show');
+})
+
+
+$('#tweet-count-btn').click(function() {
+  let tweetCountValue = $('.tweet-count-input').val().toString();
+  localStorage.removeItem('tweetCount')
+  window.localStorage.setItem('tweetCount', tweetCountValue)
+  window.location = '/'
+  console.log(tweetCountValue)
+})
+
 
 
 } );

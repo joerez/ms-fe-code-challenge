@@ -195,3 +195,66 @@ main {
   white-space: pre-line;
   padding-bottom: 1rem;
 }
+
+
+
+/******
+Settings
+*******/
+@keyframes settingsAnimation {
+  0% {
+    transform: translate(-50%, -200%);
+  }
+
+  50% {
+    transform: translate(-50%, -100%);
+  }
+
+  90% {
+    transform: translate(-50%, -40%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+.settings {
+  height: 20rem;
+  width: 20rem;
+  background: #2c3e50;
+  position: absolute;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px rgba(0,0,0,.3);
+  animation-name: settingsAnimation;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  color: white;
+}
+
+.settings.show {
+  display: flex;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.tweet-count-input {
+  width: 5rem;
+  height: 3rem;
+  margin: 1rem;
+  font-size: 2.5rem;
+}

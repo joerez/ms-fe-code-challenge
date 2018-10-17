@@ -16,14 +16,14 @@
           <div class="brand"><a href="/">TechyTweets</a></div>
         </nav>
 
-        <h3 class="about">TechyTweets grabs the 30 most recent tweets from Makeschool, YC-News, and YCombinator.</h3>
+        <h3 class="about">TechyTweets grabs the most recent tweets from Makeschool, YC-News, and YCombinator.</h3>
 
         <main>
           <section class="tweet-columns ui-sortable" id="ui-sortable">
 
             <button class="layout-btn" id="layout-btn">Change Layout</button>
 
-            <button class="layout-btn-2" id="layout-btn">Settings</button>
+            <button class="layout-btn-2" id="settings-btn">Settings</button>
 
             <div class="tweet-column ui-sortable-handle" id="makeschool">
                 <div class="top-bar">
@@ -55,6 +55,15 @@
               </div>
           </section>
         </main>
+
+        <div class="settings">
+          <h3>Settings</h3>
+          <p>Change the number of tweets displayed</p>
+            <input type="number" class="tweet-count-input" id="tweet-count-input" name="tweet-count"></input>
+            <button id="tweet-count-btn" type="submit">Change Tweet Number</button>
+          <button id="close-btn" class="close-btn">Close</button>
+        </div>
+
 
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
