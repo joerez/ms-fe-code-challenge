@@ -1,6 +1,8 @@
 
 $( function() {
 
+// uncomment this to test from a clean slate
+// localStorage.clear();
 
 /*********
 
@@ -11,7 +13,7 @@ Save Layout to local storage
 
   //If there's nothing in localStorage, then set horizontal mode to false, and tweet count to 30.
   if (!localStorage.getItem('horizontalLayout')) {
-    window.localStorage.setItem('horizontalLayout', 'false')
+    window.localStorage.setItem('horizontalLayout', 'true')
   }
 
   if (!localStorage.getItem('tweetCount')) {

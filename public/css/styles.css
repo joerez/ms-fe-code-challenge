@@ -1,3 +1,8 @@
+/********************
+
+RESETS
+
+********************/
 * {
   font-family: sans-serif;
 }
@@ -5,6 +10,12 @@
 body, html, main {
   margin: 0;
 }
+
+/********************
+
+Navigation
+
+********************/
 
 nav {
   margin: 0;
@@ -25,6 +36,14 @@ nav {
   text-decoration: none;
 }
 
+
+/********************
+
+MAIN CONTENT / CONTAINERS / SETTING BUTTONS
+
+********************/
+
+
 .about {
   text-align: center;
   width: 100%;
@@ -32,103 +51,40 @@ nav {
   padding-bottom: 0;
 }
 
+@keyframes tweetNumber {
+
+  0% {
+    font-size: 4.0rem;
+  }
+
+  50% {
+    font-size: 3.7rem
+  }
+
+  100% {
+    font-size: 1.4rem;
+  }
+
+}
+
+.tweet-number {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  background: #ecf0f1;
+  padding: .2rem;
+  animation-name: tweetNumber;
+  animation-duration: .7s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+
 main {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding: 1rem;
-}
-
-.tweet-columns {
-  position: relative;
-  width: 75%;
-  background: #ecf0f1;
-  border-radius: 8px;
-  height: 80vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.tweet-columns.horizontal {
-  height: 50rem;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: baseline;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.layout-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: white;
-  border: solid 1px black;
-  padding: .3rem .8rem;
-  border-radius: 12px;
-  transition: all 250ms;
-}
-
-.layout-btn:hover {
-  color: #2980b9;
-  border-color: #2980b9;
-}
-
-.layout-btn-2 {
-  z-index: 10;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  background: white;
-  border: solid 1px black;
-  padding: .3rem .8rem;
-  border-radius: 12px;
-  transition: all 250ms;
-}
-
-.layout-btn-2:hover {
-  color: #2980b9;
-  border-color: #2980b9;
-}
-
-
-.key {
-  width: 20%;
-  height: 20rem;
-  background: white;
-  border: solid 1rem #ecf0f1;
-}
-
-.key p {
-  padding-left: 1rem;
-}
-
-.key-container {
-  position: relative;
-  width: 80%;
-  height: 80%;
-}
-
-.tweet-column {
-  position: relative;
-  background: rgba(236, 240, 241,.3);
-  width: 28%;
-  height: 80%;
-  box-shadow: 0px 1px 1px rgba(0,0,0,.3);
-  overflow-y: scroll;
-}
-
-.tweet-column.horizontal {
-  width: 80%;
-  height: 18rem;
-  margin-top: 2rem;
-}
-
-.tweet-column.grabbed {
-  transform: rotate(5deg) scale(1.02);
-  box-shadow: 1px 1px 3px rgba(0,0,0,.4);
 }
 
 .top-bar {
@@ -151,10 +107,118 @@ main {
 }
 
 
+.layout-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: white;
+  border: solid 1px black;
+  padding: .3rem .8rem;
+  border-radius: 12px;
+  transition: all 250ms;
+  cursor: pointer;
+}
+
+.layout-btn:hover {
+  color: #2980b9;
+  border-color: #2980b9;
+}
+
+.layout-btn-2 {
+  z-index: 10;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: white;
+  border: solid 1px black;
+  padding: .3rem .8rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 250ms;
+}
+
+.layout-btn-2:hover {
+  color: #2980b9;
+  border-color: #2980b9;
+}
+
+/********************
+
+KEY SECTION
+
+********************/
 
 
+.key {
+  width: 20%;
+  height: 20rem;
+  background: white;
+  border: solid 1rem #ecf0f1;
+}
 
-/*********TWEETS********/
+.key p {
+  padding-left: 1rem;
+}
+
+small {
+  font-size: .3rem;
+}
+
+.key-container {
+  position: relative;
+  width: 80%;
+  height: 80%;
+}
+
+/********************
+
+TWEETS
+
+********************/
+
+
+.tweet-columns {
+  position: relative;
+  width: 75%;
+  background: #ecf0f1;
+  border-radius: 8px;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tweet-columns.horizontal {
+  height: 50rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+
+.tweet-column {
+  position: relative;
+  background: rgba(236, 240, 241,.3);
+  width: 28%;
+  height: 80%;
+  box-shadow: 0px 1px 1px rgba(0,0,0,.3);
+  overflow-y: scroll;
+}
+
+.tweet-column.horizontal {
+  width: 80%;
+  height: 18rem;
+  margin-top: 2rem;
+}
+
+.tweet-column.grabbed {
+  transform: rotate(5deg) scale(1.02);
+  box-shadow: 1px 1px 3px rgba(0,0,0,.4);
+}
+
 
 .tweets {
   padding: 0;
@@ -198,9 +262,12 @@ main {
 
 
 
-/******
-Settings
-*******/
+/********************
+
+SETTINGS
+
+********************/
+
 @keyframes settingsAnimation {
   0% {
     transform: translate(-50%, -200%);
@@ -255,6 +322,7 @@ Settings
   border: none;
   padding: .4rem;
   border-radius: 6px;
+  cursor: pointer;
 }
 
 .tweet-count-input {
@@ -265,12 +333,6 @@ Settings
   text-align: center;
 }
 
-.tweet-number {
-  color: #2c3e50;
-  font-size: 1.4rem;
-  background: #ecf0f1;
-  padding: .2rem;
-}
 
 #tweet-count-btn {
   background: white;
