@@ -11,15 +11,17 @@ Save Layout to local storage
 *********/
 
 
-  //If there's nothing in localStorage, then set horizontal mode to false, and tweet count to 30.
+  //If there's no layout in localStorage, then set horizontal mode to false
   if (!localStorage.getItem('horizontalLayout')) {
     window.localStorage.setItem('horizontalLayout', 'true')
   }
 
+  //If there's no tweetCount in localstorage, set the default tweet count to 30.
   if (!localStorage.getItem('tweetCount')) {
     window.localStorage.setItem('tweetCount', '30')
   }
 
+  //Load values from local storage into the DOM
   if(localStorage.getItem('tweetCount')) {
     $('.tweet-count-input').val(localStorage.getItem('tweetCount'));
     $('.tweet-number').text(localStorage.getItem('tweetCount'));
