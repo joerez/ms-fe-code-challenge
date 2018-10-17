@@ -250,6 +250,11 @@ Settings
   position: absolute;
   top: 1rem;
   right: 1rem;
+  background: #c0392b;
+  color: white;
+  border: none;
+  padding: .4rem;
+  border-radius: 6px;
 }
 
 .tweet-count-input {
@@ -257,4 +262,47 @@ Settings
   height: 3rem;
   margin: 1rem;
   font-size: 2.5rem;
+  text-align: center;
+}
+
+.tweet-number {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  background: #ecf0f1;
+  padding: .2rem;
+}
+
+#tweet-count-btn {
+  background: white;
+  color: black;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 250ms;
+}
+
+#tweet-count-btn:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+@media (max-width: 900px) and (min-width: 300px) {
+
+.key {
+  display: none;
+}
+
+.tweet-columns {
+  font-size: 30%;
+  width: 100%;
+  text-overflow: clip;
+}
+
+.tweet-text {
+  text-overflow: clip;
+}
+
 }

@@ -20,6 +20,7 @@ Save Layout to local storage
 
   if(localStorage.getItem('tweetCount')) {
     $('.tweet-count-input').val(localStorage.getItem('tweetCount'));
+    $('.tweet-number').text(localStorage.getItem('tweetCount'));
   }
 
 
